@@ -9,3 +9,6 @@ Features:
 
  1. You can add circles by clicking
  2. The color scheme for new circles varies as you move the mouse around the screen.
+
+You can view a live (although possibly not up-to-date) version of it here:
+http://viz.runningwithdata.com/circles/
