@@ -2,7 +2,7 @@ import re
 
 """convert pde to pjs. Basically the only issue is size"""
 
-replacement = "\tsize(window.innerHeight, window.innerWidth);\n"
+replacement = "\tsize(window.innerWidth, window.innerHeight);\n"
 f = open('circles.pde')
 g = open('sketch.pjs', 'w')
 
