@@ -12,3 +12,6 @@ Features:
 
 You can view a live (although possibly not up-to-date) version of it here:
 http://viz.runningwithdata.com/circles/
+
+And if you really like it, make it your OSX screensaver by using WebSaver:
+http://code.google.com/p/websaver/
