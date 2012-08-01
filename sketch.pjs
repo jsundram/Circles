@@ -6,7 +6,7 @@ Channel H = new Channel(50, 30);
 Channel S = new Channel(100, 20);
 Channel B = new Channel(150, 50);
 
-boolean MOUSE_COLOR = true;
+boolean MOUSE_COLOR = false;
 
 void setup()
 {
@@ -56,7 +56,7 @@ class Circle
     float stroke_weight;
     boolean filled;
     int lifetime;
-    int age = 0;
+    int age;
     
     PVector vel;
     public Circle()
@@ -94,12 +94,12 @@ class Circle
 
     public boolean should_remove()
     {
-        return lifetime <= age;
+        return lifetime < age;
     }
 
     public void draw()
     {
-        if (lifetime < age)
+        if (should_remove())
             return;
         
         // current alpha
@@ -154,9 +154,8 @@ void keyPressed()
 
 void mouseMoved()
 {
-    if (MOUSE_COLOR)
+    if (MOUSE_COLOR) // control saturation / brighness via mouse
     {
-        // control saturation / brighness via mouse
         S.update(map(mouseX, 0, width, S.min_allowed(), S.max_allowed()));
         B.update(map(mouseY, 0, height, B.min_allowed(), B.max_allowed()));
     }
